@@ -10,7 +10,6 @@ public class ListOfGoods {
         this.list.addAll(newList);
     }
 
-
     public void add(Good good) {
         list.add(good);
     }
@@ -31,19 +30,6 @@ public class ListOfGoods {
             }
         }
         return null;
-    }
-
-
-    public void changeCost(String name, int newCost) {
-        get(name).setCost(newCost);
-    }
-
-    public void changeCost(String name, int newCostRub, int newCostCent) {
-        get(name).setCost(newCostRub * 100 + newCostCent);
-    }
-
-    public void changeName(String name, String newName) {
-        get(name).setName(newName);
     }
 
     public void remove(Good good) {

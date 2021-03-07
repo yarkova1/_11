@@ -4,9 +4,9 @@ import java.util.Objects;
 
 public class Good {
 
-    private final String name;
-    private final int cost;
-    private final int id;
+    private String name;
+    private int cost;
+    private int id;
 
     public Good(String name, int cost, int id) {
         this.name = name;
@@ -20,7 +20,6 @@ public class Good {
         this.id = id;
     }
 
-
     public String getName() {
         return name;
     }
@@ -33,21 +32,17 @@ public class Good {
         return id;
     }
 
-
-    public void setName(String name) {
+    public void setName(String newName) {
+        name = newName;
     }
 
     public void setCost(int costCent) {
+        cost = costCent;
     }
 
-    public void setCost(int costCent, int costRub) {
-        setCost(costRub * 100 + costCent);
+    public void setCost(int costRub, int costCent) {
+        cost = costRub * 100 + costCent;
     }
-
-    public int setId(int id) {
-        return id;
-    }
-
 
     @Override
     public boolean equals(Object o) {
